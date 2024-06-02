@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #dac1ef;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header-container{
+            display: flex;
+            align-items: center !important;
+        }
+        .logo-img{
+            width: 35px;
+            height: 35px;
+            margin-right: 7px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .info {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .info-item{
+            display: flex;
+            align-items: center;
+        }
+        .info p {
+            margin: 5px 0;
+        }
+        .message {
+            margin-bottom: 30px;
+        }
+        .message label {
+            font-weight: bold;
+            display: block;
+        }
+        .message p {
+            margin: 5px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-container" style="display: flex; align-items: center;">
+            <img class="logo-img" src="cid:logoImagePNG" alt="Logo Image">
+            <h2>Contact Application</h2>
+        </div>
+        <div class="info">
+            <div class="info-item">
+                <label>Name :&nbsp;</label>
+                <p>{{name}}</p>
+            </div>
+            <div class="info-item">
+                <label>Email :&nbsp;</label>
+                <p>{{email}}</p>
+            </div>
+            <div class="info-item">
+                <label>Project :&nbsp;</label>
+                <p>{{project}}</p>
+            </div>
+        </div>
+        <div class="message">
+            <label>Message:</label>
+            <p>{{message}}</p>
+        </div>
+        <a href="#" class="button">Reply to {{name}}</a>
+    </div>
+</body>
+</html>
