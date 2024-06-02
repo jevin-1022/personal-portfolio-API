@@ -1,7 +1,7 @@
 "use strict";
 
-require("module-alias/register");
 const express = require("express");
+const path = require('path')
 const app = express();
 
 // app.get("/", (req, res) => res.send("Express on Vercel by => Jevin A Vaghasiya"));
@@ -11,11 +11,10 @@ const routesObj = {
 };
 
 const route = Object.keys(routesObj);
-console.log('route: ======> ', route);
 route.forEach((r) => {
-  console.log('r: ', r);
-  const currentRoute = require(`@route/${routesObj[r]}`);
-  console.log('currentRoute: ', currentRoute);
+  console.log("__dirname  : ", __dirname);
+  console.log("Final route  : ", path.join(__dirname, `../routes/${routesObj[r]}`));
+  const currentRoute = require(path.join(__dirname, `../routes/${routesObj[r]}`));
   app.use(`/${r}`, currentRoute);
 });
 

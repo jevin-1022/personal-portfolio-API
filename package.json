@@ -10,10 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2",
-    "module-alias": "^2.2.3"
-  },
-  "_moduleAliases": {
-    "@route": "routes"
+    "express": "^4.19.2"
   }
 }
