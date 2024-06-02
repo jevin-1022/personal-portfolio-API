@@ -11,8 +11,11 @@ const routesObj = {
 };
 
 const route = Object.keys(routesObj);
+console.log('route: ======> ', route);
 route.forEach((r) => {
+  console.log('r: ', r);
   const currentRoute = require(`@route/${routesObj[r]}`);
+  console.log('currentRoute: ', currentRoute);
   app.use(`/${r}`, currentRoute);
 });
 
